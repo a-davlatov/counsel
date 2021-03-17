@@ -1,0 +1,75 @@
+// main: ../style.less
+
+.card {
+    padding-bottom: 13px;
+    display: flex;
+    justify-content: space-between;
+
+    @media @tablet {
+        flex-direction: column;
+    }
+}
+
+.card__item {
+
+    &--contact {
+        box-shadow: 0 0 12px 5px fade(@black, 15%);
+    }
+
+    & + & {
+        margin-left: 30px;
+    }
+
+    @media @tablet {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+        & + & {
+            margin-left: 0;
+        }
+    }
+}
+
+.card__image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.card__content {
+    padding: 0 0 2.33rem 2.33rem;
+}
+
+.card__title {
+    margin: 2.33rem 0 1.66rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: @blue;
+
+    &--contact {
+        font-size: 1.06rem;
+    }
+}
+
+.card__text {
+    font-size: 1.06rem;
+    color: @black;
+}
+
+.card__address,
+.card__phone {
+    margin-bottom: 1rem;
+}
+
+.card__address,
+.card__phone,
+.card__email {
+    display: flex;
+    align-items: center;
+    font-size: 1.06rem;
+    color: @blue;
+}
+
+.card__icon {
+    margin-right: 1.33rem;
+}

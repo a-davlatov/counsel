@@ -1,0 +1,80 @@
+// main: ../style.less
+
+.reviews {
+    background-color: darken(@blue, 7%);
+}
+
+.reviews__item {
+    width: 100%;
+    max-width: 905px;
+    margin: 0 auto;
+    padding: 8rem 0;
+    text-align: center;
+
+    color: @white;
+
+    @media @tablet {
+        padding: 4rem 0;
+    }
+
+    @media @mobile {
+        padding: 2rem 0;
+    }
+}
+
+.reviews__text {
+    margin-bottom: 5rem;
+    font-size: 1.33rem;
+    line-height: 2;
+
+    &::before {
+        display: block;
+        content: "“";
+        font-size: 6.2rem;
+        font-weight: 700;
+        line-height: 1;
+        color: @white;
+    }
+
+    @media @tablet {
+        margin-bottom: 3rem;
+        font-size: 1.06rem;
+
+        &::before {
+            font-size: 4.2rem;
+        }
+    }
+
+    @media @mobile {
+        margin-bottom: 1.2rem;
+
+        &::before {
+            font-size: 3.2rem;
+            line-height: 0.5;
+        }
+    }
+}
+
+.reviews__author {
+    font-size: .93rem;
+    text-transform: uppercase;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: "";
+        width: 20px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+    }
+
+    &::before {
+        left: calc(51% - 92px);
+    }
+
+    &::after {
+        right: calc(51% - 92px);
+    }
+}

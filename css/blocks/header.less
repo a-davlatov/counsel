@@ -1,0 +1,35 @@
+// main: ../style.less
+
+.header {
+    padding-top: 2.8rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: inherit;
+
+    &.fixed {
+        padding-top: 0rem;
+        position: fixed;
+        background: #031C3A;
+    }
+
+    @media @tablet {
+        padding-top: 0;
+        background-color: #031C3A;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+        
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
